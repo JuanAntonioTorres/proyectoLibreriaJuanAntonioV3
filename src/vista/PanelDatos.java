@@ -11,8 +11,6 @@ import java.awt.Insets;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Dimension;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
 
 public class PanelDatos extends JPanel{
 	private static final long serialVersionUID = 1L;
@@ -21,7 +19,9 @@ public class PanelDatos extends JPanel{
 	private JTextField txtTitulo;
 	private JComboBox<String> cmbTemas;
 	private JTextFieldIsbn txtISBN;
-	private JSpinner spnUnidades;
+	private JTextField txtUnidades;
+	private JTextField txtUnidadesAdd;
+	private JLabel lblUnidadesAdd;
 	
 	
 	public PanelDatos() {
@@ -29,16 +29,17 @@ public class PanelDatos extends JPanel{
 		setMinimumSize(new Dimension(120, 320));
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{134, 151, 70, 0};
-		gridBagLayout.rowHeights = new int[] {0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,0};
+		gridBagLayout.rowHeights = new int[] {0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,22, 0, 0};
 		gridBagLayout.columnWeights = new double[]{1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
 		setLayout(gridBagLayout);
 		
 		JLabel lblLib = new JLabel("ISBN");
+		lblLib.setName("ignorar");
 		lblLib.setMaximumSize(new Dimension(125, 35));
 		lblLib.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLib.setMinimumSize(new Dimension(45, 25));
-		lblLib.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblLib.setFont(new Font("AR JULIAN", Font.BOLD, 13));
 		GridBagConstraints gbc_lblLib = new GridBagConstraints();
 		gbc_lblLib.fill = GridBagConstraints.BOTH;
 		gbc_lblLib.insets = new Insets(0, 0, 5, 5);
@@ -47,7 +48,7 @@ public class PanelDatos extends JPanel{
 		add(lblLib, gbc_lblLib);
 		
 		txtISBN = new JTextFieldIsbn();
-		txtISBN.setName("txtIsbn");
+		txtISBN.setName("ignorar");
 		txtISBN.setToolTipText("numero identificacion 13 digitos Ej 1234567890123");
 		txtISBN.setMinimumSize(new Dimension(45, 25));
 		txtISBN.setMaximumSize(new Dimension(125, 35));
@@ -177,15 +178,52 @@ public class PanelDatos extends JPanel{
 		gbc_lblUnidades.gridy = 11;
 		add(lblUnidades, gbc_lblUnidades);
 		
-		spnUnidades = new JSpinner();
-		spnUnidades.setName("Unidades");
-		GridBagConstraints gbc_spnUnidades = new GridBagConstraints();
-		gbc_spnUnidades.fill = GridBagConstraints.HORIZONTAL;
-		gbc_spnUnidades.insets = new Insets(0, 0, 5, 5);
-		gbc_spnUnidades.gridx = 1;
-		gbc_spnUnidades.gridy = 11;
-		add(spnUnidades, gbc_spnUnidades);
-		spnUnidades.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		txtUnidades = new JTextField();
+		txtUnidades.setHorizontalAlignment(SwingConstants.CENTER);
+		txtUnidades.setText("0");
+		txtUnidades.setToolTipText("Introduce las P\u00E1ginas Solo numeros Ej 123");
+		txtUnidades.setName("Unidades");
+		txtUnidades.setMinimumSize(new Dimension(45, 25));
+		txtUnidades.setMaximumSize(new Dimension(125, 35));
+		txtUnidades.setFont(new Font("Dialog", Font.BOLD, 11));
+		txtUnidades.setColumns(10);
+		GridBagConstraints gbc_txtUnidades = new GridBagConstraints();
+		gbc_txtUnidades.fill = GridBagConstraints.BOTH;
+		gbc_txtUnidades.insets = new Insets(0, 0, 5, 5);
+		gbc_txtUnidades.gridx = 1;
+		gbc_txtUnidades.gridy = 11;
+		add(txtUnidades, gbc_txtUnidades);
+		
+		lblUnidadesAdd = new JLabel("Cantidad ud");
+		lblUnidadesAdd.setVisible(false);
+		lblUnidadesAdd.setName("UnidadesAdd");
+		lblUnidadesAdd.setMinimumSize(new Dimension(45, 25));
+		lblUnidadesAdd.setMaximumSize(new Dimension(125, 35));
+		lblUnidadesAdd.setHorizontalAlignment(SwingConstants.CENTER);
+		lblUnidadesAdd.setFont(new Font("Dialog", Font.BOLD, 12));
+		GridBagConstraints gbc_lblUnidadesAdd = new GridBagConstraints();
+		gbc_lblUnidadesAdd.fill = GridBagConstraints.BOTH;
+		gbc_lblUnidadesAdd.insets = new Insets(0, 0, 5, 5);
+		gbc_lblUnidadesAdd.gridx = 0;
+		gbc_lblUnidadesAdd.gridy = 13;
+		add(lblUnidadesAdd, gbc_lblUnidadesAdd);
+		
+		txtUnidadesAdd = new JTextField();
+		txtUnidadesAdd.setVisible(false);
+		txtUnidadesAdd.setToolTipText("Introduce las P\u00E1ginas Solo numeros Ej 123");
+		txtUnidadesAdd.setText("0");
+		txtUnidadesAdd.setName("Unidades");
+		txtUnidadesAdd.setMinimumSize(new Dimension(45, 25));
+		txtUnidadesAdd.setMaximumSize(new Dimension(125, 35));
+		txtUnidadesAdd.setHorizontalAlignment(SwingConstants.CENTER);
+		txtUnidadesAdd.setFont(new Font("Dialog", Font.BOLD, 11));
+		txtUnidadesAdd.setColumns(10);
+		GridBagConstraints gbc_textField = new GridBagConstraints();
+		gbc_textField.insets = new Insets(0, 0, 5, 5);
+		gbc_textField.fill = GridBagConstraints.BOTH;
+		gbc_textField.gridx = 1;
+		gbc_textField.gridy = 13;
+		add(txtUnidadesAdd, gbc_textField);
 	}
 
 	
@@ -211,8 +249,16 @@ public class PanelDatos extends JPanel{
 		return cmbTemas;
 	}
 
-	public JSpinner getSpnUnidades() {
-		return spnUnidades;
+	public JTextField getTxtUnidades() {
+		return txtUnidades;
+	}
+
+	public JTextField getTxtUnidadesAdd() {
+		return txtUnidadesAdd;
+	}
+
+	public JLabel getLblUnidadesAdd() {
+		return lblUnidadesAdd;
 	}
 	
 }

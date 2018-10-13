@@ -6,12 +6,10 @@ import java.awt.GridBagConstraints;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
-
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
 import java.awt.Font;
 import java.awt.Insets;
-import javax.swing.JRadioButton;
 import java.awt.GridLayout;
 import java.awt.Dimension;
 
@@ -79,23 +77,23 @@ public class PanelChecks extends JPanel{
 		add(panelEstado, gbc_panelEstado);
 		panelEstado.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JRadioButton radioButton = new JRadioButton("Novedad");
-		radioButton.setPreferredSize(new Dimension(122, 33));
-		radioButton.setMaximumSize(new Dimension(122, 90));
-		radioButton.setBackground(new Color(255, 255, 255));
-		radioButton.setFont(new Font("Dialog", Font.BOLD, 14));
-		panelEstado.add(radioButton);
+		JCheckBox chkBtnNovedad = new JCheckBox("Novedad");
+		chkBtnNovedad.setPreferredSize(new Dimension(122, 33));
+		chkBtnNovedad.setMaximumSize(new Dimension(122, 90));
+		chkBtnNovedad.setBackground(new Color(255, 255, 255));
+		chkBtnNovedad.setFont(new Font("Dialog", Font.BOLD, 14));
+		panelEstado.add(chkBtnNovedad);
 		
-		JRadioButton radioButton_1 = new JRadioButton("Reedici\u00F3n");
-		radioButton_1.setPreferredSize(new Dimension(122, 33));
-		radioButton_1.setMaximumSize(new Dimension(122, 90));
-		radioButton_1.setBackground(new Color(255, 255, 255));
-		radioButton_1.setFont(new Font("Dialog", Font.BOLD, 14));
-		panelEstado.add(radioButton_1);
+		JCheckBox chkBtnReedicion = new JCheckBox("Reedici\u00F3n");
+		chkBtnReedicion.setPreferredSize(new Dimension(122, 33));
+		chkBtnReedicion.setMaximumSize(new Dimension(122, 90));
+		chkBtnReedicion.setBackground(new Color(255, 255, 255));
+		chkBtnReedicion.setFont(new Font("Dialog", Font.BOLD, 14));
+		panelEstado.add(chkBtnReedicion);
 		
 		botonGrupo = new ButtonGroup();
-		botonGrupo.add(radioButton);
-		botonGrupo.add(radioButton_1);
+		botonGrupo.add(chkBtnNovedad);
+		botonGrupo.add(chkBtnReedicion);
 		
 		botonGrupoDos = new ButtonGroup();
 		botonGrupoDos.add(chckbxCarton);

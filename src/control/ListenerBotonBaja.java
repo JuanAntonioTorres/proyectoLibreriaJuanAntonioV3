@@ -16,10 +16,8 @@ public class ListenerBotonBaja implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		logicaGrafica.ponerListenerEnAumentarUnidades(null, false);
 		logica.borrarLibro(logicaGrafica.getPosicionLibroActual());
 		logicaGrafica.pintarLista(logica.getLibros());
-		logicaGrafica.activarBoton("Baja", false);
 		logicaGrafica.resetearInformacion();
 		logicaGrafica.mostrarMensajeError("libro eliminado", false);
 	}

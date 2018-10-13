@@ -1,8 +1,7 @@
 package vista;
 import java.util.ArrayList;
-
 import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import modelo.Libro;
@@ -16,16 +15,10 @@ public class Validador {
 		this.gestorErrores = gestorErrores;
 	}
 	
-	/**
-	 * comprueba que los datos del formulario son correctos
-	 * y que no hay opciones sin seleccionar y ningun campo 
-	 * de texto esta vacio
-	 * @return
-	 */
-	public boolean comprobarTodos(Puente vistaPrincipal) {
-		return validaDatos(vistaPrincipal.panelDatos)&&
-				comprobarCajasVacias(vistaPrincipal)&&
-				comprobarTextosVacios(vistaPrincipal);
+	public boolean comprobarTodos(LogicaGrafica logicaGrafica) {
+		return validaDatos(logicaGrafica.panelDatos)&&
+				comprobarCajasVacias(logicaGrafica)&&
+				!comprobarTextosVacios(logicaGrafica);
 	}
 	
 	public void mostrarMensajeError(String mensaje, boolean error) {
@@ -34,50 +27,40 @@ public class Validador {
 	 
 	
 	
-	private boolean comprobarTextosVacios(Puente vistaPrincipal) {
-		boolean retorno = true;
-		for (int i = 0; i < vistaPrincipal.panelDatos.getComponentCount(); i++) {
-			if((isJTxtfield(vistaPrincipal, i)||
-					isJTxtfieldIsbn(vistaPrincipal, i))&&
-					(isEmpty(vistaPrincipal, i))){
-				retorno = false;
+	private boolean comprobarTextosVacios(LogicaGrafica logicaGrafica) {
+		boolean vacio = false;
+		for (int i = 0; i < logicaGrafica.panelDatos.getComponentCount()-1; i++) {
+			if((isJTxtfield(logicaGrafica, i)||
+					isJTxtfieldIsbn(logicaGrafica, i))&&
+					(isEmpty(logicaGrafica, i))){
+				vacio = true;
 			}
 		}
-		if(vistaPrincipal.panelDatos.getCmbTemas().getSelectedIndex()<1)retorno = false;
-		return retorno;
-	}
-
-	private boolean isJTxtfieldIsbn(Puente vistaPrincipal, int i) {
-		return vistaPrincipal.panelDatos.getComponent(i).getClass().equals(JTextFieldIsbn.class);
-	}
-
-	private boolean isEmpty(Puente vistaPrincipal, int i) {
-		return ((JTextField)vistaPrincipal.panelDatos.getComponent(i)).getText().isEmpty();
-	}
-
-	private boolean isJTxtfield(Puente vistaPrincipal, int i) {
-		return vistaPrincipal.panelDatos.getComponent(i).getClass().equals(JTextField.class);
-	}
-	
-	private boolean comprobarCajasVacias(Puente vistaPrincipal) {
-		return ((!comprobarEstadosVacios(vistaPrincipal.panelChecks))&&
-				(!comprobarFormatosVacio(vistaPrincipal.panelChecks)));
-	}
-	
-	private boolean comprobarEstadosVacios(PanelChecks panelChecks) {
-		boolean vacio = true;
-		for (int i = 0; i < panelChecks.getPanelEstado().getComponentCount(); i++) {
-			if(((JRadioButton)panelChecks.getPanelEstado().getComponent(i)).isSelected()){
-				vacio = false;
-			}
-		}
+		if(logicaGrafica.panelDatos.getCmbTemas().getSelectedIndex()<1)vacio = true;
 		return vacio;
 	}
+
+	private boolean isJTxtfieldIsbn(LogicaGrafica logicaGrafica, int i) {
+		return logicaGrafica.panelDatos.getComponent(i).getClass().equals(JTextFieldIsbn.class);
+	}
+
+	private boolean isEmpty(LogicaGrafica logicaGrafica, int i) {
+		return ((JTextField)logicaGrafica.panelDatos.getComponent(i)).getText().isEmpty();
+	}
+
+	private boolean isJTxtfield(LogicaGrafica logicaGrafica, int i) {
+		return logicaGrafica.panelDatos.getComponent(i).getClass().equals(JTextField.class);
+	}
 	
-	private boolean comprobarFormatosVacio(PanelChecks panelChecks) {
+	private boolean comprobarCajasVacias(LogicaGrafica logicaGrafica) {
+		return !comprobarChecksVacio(logicaGrafica.panelChecks.getPanelEstado()) &&
+				!comprobarChecksVacio(logicaGrafica.panelChecks.getPanelFormato());
+	}
+	
+	private boolean comprobarChecksVacio(JPanel panelChecks) {
 		boolean vacio = true;
-		for (int i = 0; i < panelChecks.getPanelFormato().getComponentCount(); i++) {
-			if(((JCheckBox)panelChecks.getPanelFormato().getComponent(i)).isSelected()){
+		for (int i = 0; i < panelChecks.getComponentCount(); i++) {
+			if(((JCheckBox)panelChecks.getComponent(i)).isSelected()){
 				vacio = false;
 			}
 		}
@@ -86,51 +69,21 @@ public class Validador {
 	
 	public boolean validaDatos(PanelDatos panelDatos) {
 		boolean datosCorrectos = true;
-		datosCorrectos = comprobarNumPaginas(panelDatos, datosCorrectos);
-		if(datosCorrectos)datosCorrectos = comprobarIsbn(panelDatos, datosCorrectos);
+		datosCorrectos = comprobarNumPaginas(panelDatos);
+		if(datosCorrectos)datosCorrectos = comprobarIsbn(panelDatos);
 		return datosCorrectos;
 	}
 
-	private boolean comprobarNumPaginas(PanelDatos panelDatos, boolean datosCorrectos) {
-		if(!validarSoloNumeros(panelDatos.getTxtNumPaginas().getText())) {
-			datosCorrectos = gestorErrores.gestionarErrorNumeroPagina(panelDatos);			
-		}
-		else {
-			gestorErrores.pintarError(panelDatos.getTxtNumPaginas(),false);
-		}
-		return datosCorrectos;
+	private boolean comprobarNumPaginas(PanelDatos panelDatos) {
+		return validarSoloNumeros(panelDatos.getTxtNumPaginas().getText());
 	}
 
-	private boolean comprobarIsbn(PanelDatos panelDatos, boolean datosCorrectos) {
+	public boolean comprobarIsbn(PanelDatos panelDatos) {
 		String textoIsbn = panelDatos.getTxtISBN().getText();
-		if(!validarLongitud(textoIsbn,LONGITUD_ISBN)|| !validarSoloNumeros(textoIsbn)) {
-			 datosCorrectos = false;
-			 if(siHaEscritoAlgoNoCorrecto(textoIsbn)){
-				 ponerRojoCuadroIsbn(panelDatos);
-			 }
-			 else {
-				 ponerBlancoCuadroIsbn(panelDatos);
-			 }
-		}
-		else {
-			ponerBlancoCuadroIsbn(panelDatos);
-		}
-		return datosCorrectos;
+		return validarLongitud(textoIsbn,LONGITUD_ISBN) && validarSoloNumeros(textoIsbn);
 	}
 
-	private void ponerBlancoCuadroIsbn(PanelDatos panelDatos) {
-		gestorErrores.pintarError(panelDatos.getTxtISBN(),false);
-	}
-
-	private void ponerRojoCuadroIsbn(PanelDatos panelDatos) {
-		gestorErrores.pintarError(panelDatos.getTxtISBN(),true);
-	}
-
-	private boolean siHaEscritoAlgoNoCorrecto(String textoIsbn) {
-		return textoIsbn.length()>0 && textoIsbn.length()!=LONGITUD_ISBN;
-	}
-
-	public boolean validarISBN(String ISBN,ArrayList<Libro> arrayList) {
+	public boolean comprobarIsbnRepetido(String ISBN , ArrayList<Libro> arrayList) {
 		boolean retorno = true;
 		for (int i = 0; i < arrayList.size(); i++) {
 			if(arrayList.get(i) != null && arrayList.get(i).getIsbn().equals(ISBN)) {

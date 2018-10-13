@@ -23,7 +23,6 @@ public class ListenerBotonAlta implements ActionListener{
 			logica.altaLibro(libro);
 			logicaGrafica.pintarLista(logica.getLibros());
 			logicaGrafica.resetearInformacion();
-			logicaGrafica.activarBoton("Alta", false);
 			logicaGrafica.mostrarMensajeError("libro añadido", false);
 		}
 	}

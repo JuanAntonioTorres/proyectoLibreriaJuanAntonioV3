@@ -15,8 +15,8 @@ public class Logica {
 		libros.add(libro);
 	}
 
-	public void borrarLibro(int selectedIndex) {
-		libros.remove(selectedIndex);
+	public Libro borrarLibro(int selectedIndex) {
+		return libros.remove(selectedIndex);
 	}
 
 	public ArrayList<Libro> getLibros() {

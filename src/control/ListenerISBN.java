@@ -19,28 +19,36 @@ public class ListenerISBN implements KeyListener{
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		logicaGrafica.ponerListenerEnAumentarUnidades(new ListenerAumentarUnidad(logica,logicaGrafica), false);
-		logicaGrafica.activarPanelesInformacion(true);
-		logicaGrafica.borrarTodoMenosIsbn();
+		//para que sonarLint este contento
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		logicaGrafica.comprobarTodos();
-		logicaGrafica.comprobarSIActivarAlta();
 		String isbnNumber = ((JTextFieldIsbn)e.getSource()).obtenerTexto();
-		Libro libroTemp = logica.obtenerLibro(isbnNumber);
-		if(libroTemp!=null) {
-			logicaGrafica.pintarLibro(libroTemp);
+		if(isbnNumber.length()==13) {
+			Libro libroTemp = logica.obtenerLibro(isbnNumber);
+			if(libroTemp!=null) {
+				logicaGrafica.pintarLibro(libroTemp);
+				logicaGrafica.activarPanelesInformacion(false);
+				logicaGrafica.mostrarMensajeError("El libro ya existe", true);
+			}
+			else if(logicaGrafica.comprobarIsbn()){
+				logicaGrafica.activarPanelesInformacion(true);
+			}
+			else {
+				logicaGrafica.borrarTodoMenosIsbn();
+				logicaGrafica.activarPanelesInformacion(false);
+				logicaGrafica.activarIsbn(true);
+			}
+		}
+		else {
+			logicaGrafica.borrarTodoMenosIsbn();
 			logicaGrafica.activarPanelesInformacion(false);
-			logicaGrafica.activarIsbn(true);
-			logicaGrafica.ponerListenerEnAumentarUnidades(new ListenerAumentarUnidad(logica, logicaGrafica), true);
 		}
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		//para que sonarLint este contento
 	}
 
 }

@@ -1,4 +1,5 @@
 package control;
+import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import vista.LogicaGrafica;
@@ -19,13 +20,16 @@ public class MouseListenerLista implements MouseListener{
 		logicaGrafica.resetearMensajeError();
 		logicaGrafica.actualizarLibroActual();
 		logicaGrafica.pintarLibro(logica.getLibros().get((logicaGrafica.getPosicionLibroActual())));
-		logicaGrafica.activarBoton("Baja", true);
-		logicaGrafica.restablecerTextoBotones();
-		logicaGrafica.cambiarListenerBoton("Alta",new ListenerBotonModificar(logica, logicaGrafica));
-		logicaGrafica.cambiarTextoBoton("Alta","Modificar");
-		logicaGrafica.activarBoton("Alta", true);
-		logicaGrafica.ponerListenerEnAumentarUnidades(new ListenerAumentarUnidad(logica, logicaGrafica), true);
 		logicaGrafica.activarPanelesInformacion(false);
+		Component boton = logicaGrafica.getPanelParaBotones().getComponent(0);
+		if(boton.getName().equals("Alta")) {
+			boton.setEnabled(false);
+		}
+		else if (boton.getName().equals("Modificar")) {
+			logicaGrafica.activarPanelesInformacion(true);
+			logicaGrafica.activarIsbn(false);
+		}
+		else boton.setEnabled(true);
 	}
 
 	@Override

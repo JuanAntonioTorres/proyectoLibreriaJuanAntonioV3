@@ -8,23 +8,31 @@ import vista.LogicaGrafica;
 
 public class ListenerCompruebaAlta implements ActionListener,KeyListener{
 	
-	private LogicaGrafica logicaGragica;
+	private LogicaGrafica logicaGrafica;
 	
-	public ListenerCompruebaAlta(LogicaGrafica logicaGragica) {
+	public ListenerCompruebaAlta(LogicaGrafica logicaGrafica) {
 		super();
-		this.logicaGragica = logicaGragica;
+		this.logicaGrafica = logicaGrafica;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		logicaGragica.comprobarTodos();
-		logicaGragica.comprobarSIActivarAlta();
+		if (logicaGrafica.comprobarSIActivarAlta()) {
+			logicaGrafica.getPanelParaBotones().getComponent(0).setEnabled(true);
+		}
+		else {
+			logicaGrafica.getPanelParaBotones().getComponent(0).setEnabled(false);
+		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-		logicaGragica.comprobarTodos();
-		logicaGragica.comprobarSIActivarAlta();
+		if (logicaGrafica.comprobarSIActivarAlta()) {
+			logicaGrafica.getPanelParaBotones().getComponent(0).setEnabled(true);
+		}
+		else {
+			logicaGrafica.getPanelParaBotones().getComponent(0).setEnabled(false);
+		}
 	}
 	
 	@Override
