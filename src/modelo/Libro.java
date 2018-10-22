@@ -1,6 +1,9 @@
 package modelo;
 
-public class Libro {
+import java.io.Serializable;
+
+public class Libro implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String titulo;
 	private String autor;
 	private String tema;
@@ -9,21 +12,24 @@ public class Libro {
 	private String formato;
 	private String estado;
 	private int unidades;
+	private String editorial;
 	
 	public Libro(String[]datos) {
 		super();
 		this.titulo = datos[0];
 		this.autor =datos[1];
-		this.tema = datos[2];
-		this.numPaginas = Integer.parseInt(datos[3]);
-		this.formato = datos[4];
-		this.estado = datos[5];
-		this.isbn = datos[6];
-		this.unidades = Integer.parseInt(datos[7]);
+		this.editorial = datos[2];
+		this.tema = datos[3];
+		this.numPaginas = Integer.parseInt(datos[4]);
+		this.formato = datos[5];
+		this.estado = datos[6];
+		this.isbn = datos[7];
+		this.unidades = Integer.parseInt(datos[8]);
 	}
 
 	public boolean esIgualQue(Libro libro) {
 		if(this.autor.equals(libro.getAutor()))return false;
+		if(this.editorial.equals(libro.getEditorial()))return false;
 		if(this.estado.equals(libro.getEstado()))return false;
 		if(this.formato.equals(libro.getFormato()))return false;
 		if(this.numPaginas==libro.getNumPaginas())return false;
@@ -67,5 +73,8 @@ public class Libro {
 		this.unidades = unidades;
 	}
 
-	
+	public String getEditorial() {
+		return editorial;
+	}
+
 }

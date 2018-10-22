@@ -22,6 +22,7 @@ public class PanelDatos extends JPanel{
 	private JTextField txtUnidades;
 	private JTextField txtUnidadesAdd;
 	private JLabel lblUnidadesAdd;
+	private JTextField txtEditorial;
 	
 	
 	public PanelDatos() {
@@ -29,9 +30,9 @@ public class PanelDatos extends JPanel{
 		setMinimumSize(new Dimension(120, 320));
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{134, 151, 70, 0};
-		gridBagLayout.rowHeights = new int[] {0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,22, 0, 0};
+		gridBagLayout.rowHeights = new int[] {0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,22, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
 		setLayout(gridBagLayout);
 		
 		JLabel lblLib = new JLabel("ISBN");
@@ -113,6 +114,36 @@ public class PanelDatos extends JPanel{
 		gbctxtAutor.gridy = 5;
 		add(txtAutor, gbctxtAutor);
 		
+		lblUnidadesAdd = new JLabel("Cantidad ud");
+		lblUnidadesAdd.setVisible(false);
+		
+		JLabel lblEditorial = new JLabel("Editorial");
+		lblEditorial.setToolTipText("editorial");
+		lblEditorial.setMinimumSize(new Dimension(45, 24));
+		lblEditorial.setMaximumSize(new Dimension(125, 33));
+		lblEditorial.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEditorial.setFont(new Font("Dialog", Font.BOLD, 15));
+		GridBagConstraints gbc_lblEditorial = new GridBagConstraints();
+		gbc_lblEditorial.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblEditorial.insets = new Insets(0, 0, 5, 5);
+		gbc_lblEditorial.gridx = 0;
+		gbc_lblEditorial.gridy = 7;
+		add(lblEditorial, gbc_lblEditorial);
+		
+		txtEditorial = new JTextField();
+		txtEditorial.setName("Editorial");
+		txtEditorial.setToolTipText("Introduce el Autor del Libro");
+		txtEditorial.setMinimumSize(new Dimension(45, 25));
+		txtEditorial.setMaximumSize(new Dimension(125, 35));
+		txtEditorial.setFont(new Font("Dialog", Font.BOLD, 11));
+		txtEditorial.setColumns(10);
+		GridBagConstraints gbc_txtEditorial = new GridBagConstraints();
+		gbc_txtEditorial.insets = new Insets(0, 0, 5, 5);
+		gbc_txtEditorial.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtEditorial.gridx = 1;
+		gbc_txtEditorial.gridy = 7;
+		add(txtEditorial, gbc_txtEditorial);
+		
 		JLabel lblTemaLibro = new JLabel("Tema");
 		lblTemaLibro.setMaximumSize(new Dimension(125, 35));
 		lblTemaLibro.setHorizontalAlignment(SwingConstants.CENTER);
@@ -122,7 +153,7 @@ public class PanelDatos extends JPanel{
 		gbclblTemaLibro.fill = GridBagConstraints.BOTH;
 		gbclblTemaLibro.insets = new Insets(0, 0, 5, 5);
 		gbclblTemaLibro.gridx = 0;
-		gbclblTemaLibro.gridy = 7;
+		gbclblTemaLibro.gridy = 9;
 		add(lblTemaLibro, gbclblTemaLibro);
 		
 		cmbTemas = new JComboBox<>();
@@ -137,7 +168,7 @@ public class PanelDatos extends JPanel{
 		gbccmbTemas.insets = new Insets(0, 0, 5, 5);
 		gbccmbTemas.fill = GridBagConstraints.BOTH;
 		gbccmbTemas.gridx = 1;
-		gbccmbTemas.gridy = 7;
+		gbccmbTemas.gridy = 9;
 		add(cmbTemas, gbccmbTemas);
 		
 		JLabel lblNumPaginas = new JLabel("Num.Pag");
@@ -149,7 +180,7 @@ public class PanelDatos extends JPanel{
 		gbclblNumPaginas.fill = GridBagConstraints.BOTH;
 		gbclblNumPaginas.insets = new Insets(0, 0, 5, 5);
 		gbclblNumPaginas.gridx = 0;
-		gbclblNumPaginas.gridy = 9;
+		gbclblNumPaginas.gridy = 11;
 		add(lblNumPaginas, gbclblNumPaginas);
 		
 		txtNumPaginas = new JTextField();
@@ -163,7 +194,7 @@ public class PanelDatos extends JPanel{
 		gbc_txtNumPaginas.insets = new Insets(0, 0, 5, 5);
 		gbc_txtNumPaginas.fill = GridBagConstraints.BOTH;
 		gbc_txtNumPaginas.gridx = 1;
-		gbc_txtNumPaginas.gridy = 9;
+		gbc_txtNumPaginas.gridy = 11;
 		add(txtNumPaginas, gbc_txtNumPaginas);
 		
 		JLabel lblUnidades = new JLabel("Unidades");
@@ -175,7 +206,7 @@ public class PanelDatos extends JPanel{
 		gbc_lblUnidades.fill = GridBagConstraints.BOTH;
 		gbc_lblUnidades.insets = new Insets(0, 0, 5, 5);
 		gbc_lblUnidades.gridx = 0;
-		gbc_lblUnidades.gridy = 11;
+		gbc_lblUnidades.gridy = 13;
 		add(lblUnidades, gbc_lblUnidades);
 		
 		txtUnidades = new JTextField();
@@ -191,11 +222,8 @@ public class PanelDatos extends JPanel{
 		gbc_txtUnidades.fill = GridBagConstraints.BOTH;
 		gbc_txtUnidades.insets = new Insets(0, 0, 5, 5);
 		gbc_txtUnidades.gridx = 1;
-		gbc_txtUnidades.gridy = 11;
+		gbc_txtUnidades.gridy = 13;
 		add(txtUnidades, gbc_txtUnidades);
-		
-		lblUnidadesAdd = new JLabel("Cantidad ud");
-		lblUnidadesAdd.setVisible(false);
 		lblUnidadesAdd.setName("UnidadesAdd");
 		lblUnidadesAdd.setMinimumSize(new Dimension(45, 25));
 		lblUnidadesAdd.setMaximumSize(new Dimension(125, 35));
@@ -205,7 +233,7 @@ public class PanelDatos extends JPanel{
 		gbc_lblUnidadesAdd.fill = GridBagConstraints.BOTH;
 		gbc_lblUnidadesAdd.insets = new Insets(0, 0, 5, 5);
 		gbc_lblUnidadesAdd.gridx = 0;
-		gbc_lblUnidadesAdd.gridy = 13;
+		gbc_lblUnidadesAdd.gridy = 15;
 		add(lblUnidadesAdd, gbc_lblUnidadesAdd);
 		
 		txtUnidadesAdd = new JTextField();
@@ -218,12 +246,12 @@ public class PanelDatos extends JPanel{
 		txtUnidadesAdd.setHorizontalAlignment(SwingConstants.CENTER);
 		txtUnidadesAdd.setFont(new Font("Dialog", Font.BOLD, 11));
 		txtUnidadesAdd.setColumns(10);
-		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.insets = new Insets(0, 0, 5, 5);
-		gbc_textField.fill = GridBagConstraints.BOTH;
-		gbc_textField.gridx = 1;
-		gbc_textField.gridy = 13;
-		add(txtUnidadesAdd, gbc_textField);
+		GridBagConstraints gbc_txtEditorial1 = new GridBagConstraints();
+		gbc_txtEditorial1.insets = new Insets(0, 0, 5, 5);
+		gbc_txtEditorial1.fill = GridBagConstraints.BOTH;
+		gbc_txtEditorial1.gridx = 1;
+		gbc_txtEditorial1.gridy = 15;
+		add(txtUnidadesAdd, gbc_txtEditorial1);
 	}
 
 	
@@ -260,5 +288,16 @@ public class PanelDatos extends JPanel{
 	public JLabel getLblUnidadesAdd() {
 		return lblUnidadesAdd;
 	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+	public JTextField getTxtEditorial() {
+		return txtEditorial;
+	}
+	
 	
 }

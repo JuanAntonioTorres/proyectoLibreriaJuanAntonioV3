@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="vista.VistaPrincipal" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/vista/VistaPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1570" y="235"/>    
+    <position height="-1" width="-1" x="1560" y="233"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="control.ListenerBotonModificar" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/ListenerBotonModificar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="228" x="644" y="330"/>    
+    <position height="99" width="228" x="650" y="366"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="control.ListenerISBN" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/ListenerISBN.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="228" x="643" y="179"/>    
+    <position height="135" width="228" x="653" y="209"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="control.ListenerBotonBaja" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/ListenerBotonBaja.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="755" y="113"/>    
+    <position height="-1" width="-1" x="763" y="121"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="control.Principal" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/Principal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1184" y="-46"/>    
+    <position height="-1" width="-1" x="1182" y="-46"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -129,7 +129,7 @@
   </class>  
   <class id="15" language="java" name="control.ListenerBotonModificar" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/ListenerBotonModificar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="232" x="645" y="713"/>    
+    <position height="99" width="232" x="657" y="701"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -138,7 +138,7 @@
   </class>  
   <class id="16" language="java" name="control.MouseListenerLista" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/MouseListenerLista.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="102" width="231" x="644" y="450"/>    
+    <position height="102" width="231" x="646" y="518"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -156,7 +156,7 @@
   </class>  
   <class id="18" language="java" name="control.Logica" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/control/Logica.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="217" y="245"/>    
+    <position height="-1" width="-1" x="311" y="237"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -165,7 +165,7 @@
   </class>  
   <class id="19" language="java" name="modelo.Libro" project="proyectoLibreriaJuanAntonioV3" 
     file="/proyectoLibreriaJuanAntonioV3/src/modelo/Libro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-66" y="246"/>    
+    <position height="-1" width="-1" x="-140" y="242"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="false" static="true"/>      
@@ -173,7 +173,7 @@
     </display>  
   </class>  
   <association id="20">    
-    <end type="SOURCE" refId="14" navigable="false">      
+    <end type="SOURCE" refId="17" navigable="false">      
       <attribute id="21" name="logica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
@@ -185,253 +185,265 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="23">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="24" name="gestorErrores">        
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="24" name="logicaGrafica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="25" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="26">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="27">    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="28" name="logicaGrafica">        
+  <association id="26">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="27" name="logicaGrafica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="29" minimum="0" maximum="1">        
+      <multiplicity id="28" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="30">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <association id="31">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="32" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="35" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="37">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="38" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="39" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="40">    
+  <association id="29">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="41" name="panelDatos">        
+      <attribute id="30" name="panelDatos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="42" minimum="0" maximum="1">        
+      <multiplicity id="31" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="43">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="44" name="logicaGrafica">        
+  <association id="32">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="33" name="gestorErrores">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="45" minimum="0" maximum="1">        
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="36" name="logicaGrafica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="46">    
+  <association id="38">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="39" name="logica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="47" name="logica">        
+      <attribute id="42" name="logica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="48" minimum="0" maximum="1">        
+      <multiplicity id="43" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="49">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="50" name="logica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="51" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="52">    
+  <association id="44">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="53" name="panelParaBotones">        
+      <attribute id="45" name="panelParaBotones">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="54" minimum="0" maximum="1">        
+      <multiplicity id="46" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="55">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="56" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="57" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="58">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="59" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="60" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="61">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="62" name="txtISBN">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="63" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="64">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="65" name="logica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="66" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="67">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="68" name="logica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="69" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="70">    
+  <association id="47">    
     <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="71" name="libros">        
+      <attribute id="48" name="libros">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="72" minimum="0" maximum="2147483647">        
+      <multiplicity id="49" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="73">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="74" name="panelChecks">        
+  <association id="50">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="51" name="logicaGrafica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="75" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="76">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="77" name="logicaGrafica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="78" minimum="0" maximum="1">        
+      <multiplicity id="52" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="79">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="80" name="validador">        
+  <association id="53">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="54" name="logica">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="81" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="82">    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="83" name="logica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="84" minimum="0" maximum="1">        
+      <multiplicity id="55" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="57" name="validador">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <association id="60">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="61" name="txtISBN">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="62" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="64" name="logica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="65" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="67" name="logicaGrafica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="68" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="70" name="logica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="71" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="73" name="logica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="74" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="75">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="76" name="panelChecks">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="77" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="79" name="logicaGrafica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="80" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="81">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="82" name="logicaGrafica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="83" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="85" name="logicaGrafica">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="86" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

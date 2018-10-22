@@ -55,7 +55,7 @@ public class VistaPrincipal extends JFrame {
 		getContentPane().setBackground(new Color(255, 255, 255));
 		getContentPane().setForeground(new Color(102, 102, 153));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 590, 500);
+		setBounds(100, 100, 590, 579);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 94, 75, 114, 22, 56, 91, 28};
 		gridBagLayout.rowHeights = new int[]{53, 28, 41, 55, 55, 55, 35, 55, 22, 28, 0};
@@ -233,7 +233,7 @@ public class VistaPrincipal extends JFrame {
 	private void modoBajaAltaModificar() {
 		desactivarPanelDatos();
 		desactivarChecks();
-		resetearPanelDatos();
+		resetearInformacion();
 		panelDatos.getTxtISBN().setEnabled(true);
 		panelDatos.getTxtUnidadesAdd().setVisible(false);
 		panelDatos.getLblUnidadesAdd().setVisible(false);
@@ -250,7 +250,7 @@ public class VistaPrincipal extends JFrame {
 	private void modoVentaAgregar() {
 		desactivarPanelDatos();
 		desactivarChecks();
-		resetearPanelDatos();
+		resetearInformacion();
 		panelDatos.getTxtUnidadesAdd().setVisible(true);
 		panelDatos.getLblUnidadesAdd().setVisible(true);
 		panelDatos.getTxtISBN().setEnabled(true);
@@ -299,7 +299,7 @@ public class VistaPrincipal extends JFrame {
 		for (int i = 0; i < panel.getComponentCount()-2; i++) {
 			if(panel.getComponent(i).getName() == null ||
 					!panel.getComponent(i).getName().equals("ignorar")) {
-				panel.getComponent(i).setEnabled(activar); 
+				panel.getComponent(i).setEnabled(activar);
 			}
 		}
 	}
@@ -360,6 +360,7 @@ public class VistaPrincipal extends JFrame {
 	private void pintarDatos(Libro libro) {
 		panelDatos.getTxtTitulo().setText(libro.getTitulo());
 		panelDatos.getTxtAutor().setText(libro.getAutor());
+		panelDatos.getTxtEditorial().setText(libro.getAutor());
 		pintarComboBox(libro);
 		panelDatos.getTxtNumPaginas().setText(String.valueOf(libro.getNumPaginas()));
 		panelDatos.getTxtISBN().setText(String.valueOf(libro.getIsbn()));

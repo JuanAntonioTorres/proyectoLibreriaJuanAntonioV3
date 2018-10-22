@@ -50,6 +50,14 @@ public class PanelChecks extends JPanel{
 		chckbxCarton.setFont(new Font("Dialog", Font.BOLD, 14));
 		panelFormato.add(chckbxCarton);
 		
+		JCheckBox chckbxEspiral = new JCheckBox("Espiral");
+		chckbxEspiral.setPreferredSize(new Dimension(122, 33));
+		chckbxEspiral.setName("espiral");
+		chckbxEspiral.setMaximumSize(new Dimension(122, 90));
+		chckbxEspiral.setFont(new Font("Dialog", Font.BOLD, 14));
+		chckbxEspiral.setBackground(Color.WHITE);
+		panelFormato.add(chckbxEspiral);
+		
 		JCheckBox chckbxRstica = new JCheckBox("R\u00FAstica");
 		chckbxRstica.setName("rustica");
 		chckbxRstica.setPreferredSize(new Dimension(122, 33));
@@ -58,13 +66,13 @@ public class PanelChecks extends JPanel{
 		chckbxRstica.setFont(new Font("Dialog", Font.BOLD, 14));
 		panelFormato.add(chckbxRstica);
 		
-		JCheckBox tapaDura = new JCheckBox("Tapa Dura");
-		tapaDura.setName("tapaDura");
-		tapaDura.setPreferredSize(new Dimension(122, 33));
-		tapaDura.setMaximumSize(new Dimension(122, 90));
-		tapaDura.setBackground(new Color(255, 255, 255));
-		tapaDura.setFont(new Font("Dialog", Font.BOLD, 14));
-		panelFormato.add(tapaDura);
+		JCheckBox chckbxGrapado = new JCheckBox("Grapado");
+		chckbxGrapado.setName("tapaDura");
+		chckbxGrapado.setPreferredSize(new Dimension(122, 33));
+		chckbxGrapado.setMaximumSize(new Dimension(122, 90));
+		chckbxGrapado.setBackground(new Color(255, 255, 255));
+		chckbxGrapado.setFont(new Font("Dialog", Font.BOLD, 14));
+		panelFormato.add(chckbxGrapado);
 		
 		panelEstado = new JPanel();
 		panelEstado.setPreferredSize(new Dimension(122, 222));
@@ -97,8 +105,9 @@ public class PanelChecks extends JPanel{
 		
 		botonGrupoDos = new ButtonGroup();
 		botonGrupoDos.add(chckbxCarton);
+		botonGrupoDos.add(chckbxEspiral);
 		botonGrupoDos.add(chckbxRstica);
-		botonGrupoDos.add(tapaDura);
+		botonGrupoDos.add(chckbxGrapado);
 	}
 	
 	

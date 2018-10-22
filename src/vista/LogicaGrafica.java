@@ -22,23 +22,27 @@ public class LogicaGrafica extends VistaPrincipal{
 	public LogicaGrafica() {
 		super();
 		this.validador = new Validador(new GestorErrores(lblMensajeError));
-		asignarListeners();
+		asignarListenersYpintarLista();
 	}
 	
-	public Libro crearLibro(ArrayList<Libro> arrayList) {
-		String [] datosLibro  = new String[8];
-		datosLibro [0] = panelDatos .getTxtTitulo().getText();
+	public Libro crearLibro(ArrayList<Libro> arrayList,boolean paraGuardar) {
+		String [] datosLibro  = new String[9];
+		datosLibro [0] = panelDatos.getTxtTitulo().getText();
 		datosLibro [1] = panelDatos.getTxtAutor().getText();
-		datosLibro [2] = (String) panelDatos.getCmbTemas().getSelectedItem();
-		datosLibro [3] = panelDatos.getTxtNumPaginas().getText();
-		datosLibro [4] = obtenerFormatos();
-		datosLibro [5] = obtenerEstados();
-		datosLibro [6] = panelDatos.getTxtISBN().getText();
-		datosLibro [7] = panelDatos.getTxtUnidades().getText();
-		if(validador.comprobarIsbnRepetido(datosLibro [6],arrayList)) {
-			return new Libro(datosLibro);
+		datosLibro [2] = panelDatos.getTxtEditorial().getText();
+		datosLibro [3] = (String) panelDatos.getCmbTemas().getSelectedItem();
+		datosLibro [4] = panelDatos.getTxtNumPaginas().getText();
+		datosLibro [5] = obtenerFormatos();
+		datosLibro [6] = obtenerEstados();
+		datosLibro [7] = panelDatos.getTxtISBN().getText();
+		datosLibro [8] = panelDatos.getTxtUnidades().getText();
+		if(paraGuardar) {
+			if(validador.comprobarIsbnRepetido(datosLibro [7],arrayList)) {
+				return new Libro(datosLibro);
+			}
+			else return null;
 		}
-		else return null;
+		else return new Libro(datosLibro);
 	}
 	
 	public void mostrarMensajeError(String mensaje, boolean error) {
@@ -68,12 +72,13 @@ public class LogicaGrafica extends VistaPrincipal{
 		return comprobarTodos();
 	}
 	
-	private void asignarListeners() {
+	private void asignarListenersYpintarLista() {
 		Logica logica = new Logica();
 		ponerListenerEnBotones(logica);
 		ponerMouseListenerEnListaLibro(logica);
 		ponerListenerEnPanelDatos(logica);
 		ponerListenerEnChecks();
+		pintarLista(logica.getLibros());
 	}
 
 	private void ponerMouseListenerEnListaLibro(Logica logica) {

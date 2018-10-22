@@ -16,54 +16,24 @@ public class ListenerBotonModificar implements ActionListener{
 		this.logicaGrafica = logicaGrafica;
 	}
 
-	
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		logicaGrafica.resetearMensajeError();
 		Libro libroOriginal = obtenerLibroSeleccionado();
 		sacarLibroDeLibros();
 		Libro libroModificado = obtenerLibroModificado();
-		
-		if(libroModificado==null || !modificarLibro(libroOriginal, libroModificado)) {
-			reestablecerLibroOriginal(libroOriginal);
-			logicaGrafica.mostrarMensajeError("modificación no valida",true);
-		}
-		else {
-			logicaGrafica.resetearInformacion();
-			logicaGrafica.pintarLista(logica.getLibros());
-			logicaGrafica.mostrarMensajeError("libro modificado", false);
-		}
-		
-		
-		
+		logica.modificarLibro(libroOriginal, libroModificado);
+		logicaGrafica.resetearInformacion();
+		logicaGrafica.pintarLista(logica.getLibros());
 	}
-
-
-
-	private void reestablecerLibroOriginal(Libro libroOriginal) {
-		logica.getLibros().add(logicaGrafica.getPosicionLibroActual(), libroOriginal);
-	}
-
-
-
-	private boolean modificarLibro(Libro original,Libro libroModificado) {
-		return logica.modificarLibro(original,libroModificado,logicaGrafica.getPosicionLibroActual());
-	}
-
-
 
 	private Libro obtenerLibroModificado() {
-		return logicaGrafica.crearLibro(logica.getLibros());
+		return logicaGrafica.crearLibro(logica.getLibros(),false);
 	}
-
-
 
 	private void sacarLibroDeLibros() {
-		logica.getLibros().remove(logicaGrafica.getPosicionLibroActual());
+		logica.borrarLibro(logicaGrafica.getPosicionLibroActual());
 	}
-
-
 
 	private Libro obtenerLibroSeleccionado() {
 		return logica.getLibros().get(logicaGrafica.getPosicionLibroActual());

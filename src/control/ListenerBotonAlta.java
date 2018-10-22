@@ -18,7 +18,7 @@ public class ListenerBotonAlta implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Libro libro = logicaGrafica.crearLibro(logica.getLibros());
+		Libro libro = logicaGrafica.crearLibro(logica.getLibros(),true);
 		if (libro!= null) {
 			logica.altaLibro(libro);
 			logicaGrafica.pintarLista(logica.getLibros());
